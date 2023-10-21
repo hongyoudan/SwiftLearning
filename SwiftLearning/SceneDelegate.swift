@@ -19,10 +19,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
         }
     }
+    
+    // 跳转到登录界面
+    func goLogin(){
+        setRootViewController(storyboardName: "Main", controllerName: "Login")
+    }
+    
+    // 跳转到首页
+    func goHome(){
+        setRootViewController(storyboardName: "Main", controllerName: "Home")
+    }
 
-    // 这个方法用于跳转到下一个 Controller
-    func next() {
-        // todo 这里可以根据自己的需求进行跳转
+    // 设置根控制器
+    func setRootViewController(storyboardName: String, controllerName: String) {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil) // 这里的 storyboardName 是 xxx.storyboard 的名字
+        let controller = storyboard.instantiateViewController(withIdentifier: controllerName) // 这里的 controllerName 是 xxx.storyboard 中的 Controller 的 Storyboard ID
+        window?.rootViewController = controller // 这里的 window 是在 SceneDelegate 中定义的，用于跳转到下一个 Controller
     }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

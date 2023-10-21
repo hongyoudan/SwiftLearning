@@ -14,7 +14,7 @@ class SplashController: UIViewController {
 
         // 延迟 2 秒后跳转到下一个 Controller
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            SceneDelegate.shared.next()
+            SceneDelegate.shared.setRootViewController(storyboardName: "Main", controllerName: "Login")
         }
     }
 }
