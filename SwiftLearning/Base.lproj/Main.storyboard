@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zLN-rV-Mxf">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -23,8 +23,37 @@
             </objects>
             <point key="canvasLocation" x="-19" y="-27"/>
         </scene>
+        <!--Splash Controller-->
+        <scene sceneID="PV1-Il-IFh">
+            <objects>
+                <viewController id="zLN-rV-Mxf" customClass="SplashController" customModule="SwiftLearning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="atL-Dt-7do">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BchtxLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7Mi-AO-XW6">
+                                <rect key="frame" x="121" y="287" width="150" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="70t-oj-3Oz"/>
+                                    <constraint firstAttribute="width" constant="150" id="xC9-hR-9hZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c7h-dG-19p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Mi-AO-XW6" firstAttribute="centerX" secondItem="atL-Dt-7do" secondAttribute="centerX" id="ihA-4Z-e9M"/>
+                            <constraint firstItem="7Mi-AO-XW6" firstAttribute="top" secondItem="c7h-dG-19p" secondAttribute="top" constant="207" id="y74-Bh-h81"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcz-J0-tom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-906" y="-27"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="BchtxLogo" width="588" height="612"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

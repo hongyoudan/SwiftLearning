@@ -11,6 +11,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    // 这是一个单例模式，用于在不同的 Controller 之间进行跳转
+    open class var shared: SceneDelegate {
+        get {
+            // 这里的 UIApplication.shared.delegate 是一个 SceneDelegate 类型的对象
+            // 但是我们需要的是 SceneDelegate 的单例对象，所以需要进行类型转换
+            return UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
+        }
+    }
+
+    // 这个方法用于跳转到下一个 Controller
+    func next() {
+        // todo 这里可以根据自己的需求进行跳转
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
