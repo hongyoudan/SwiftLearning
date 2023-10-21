@@ -14,7 +14,15 @@ class SplashController: UIViewController {
 
         // 延迟 2 秒后跳转到下一个 Controller
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            SceneDelegate.shared.setRootViewController(storyboardName: "Main", controllerName: "Login")
+
+            // 判断用户是否登录
+            if PreferenceUtils.checkIsLogin() {
+                // 已登录，跳转到首页
+                SceneDelegate.shared.goHome()
+            } else {
+                // 未登录，跳转到登录页
+                SceneDelegate.shared.goLogin()
+            }
         }
     }
 }

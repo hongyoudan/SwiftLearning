@@ -21,8 +21,8 @@ class LoginController: UIViewController {
     @IBAction func btnLogin(_ sender: UIButton) {
         
         // 获取输入框中的手机号和密码
-        let mobile = tfMobile.text
-        let password = tfPassword.text
+        let mobile = tfMobile.text!
+        let password = tfPassword.text!
         
         // 定义手机号和密码的正则表达式
         let mobileRegex = "^(1[0-9])\\d{9}$" // 11位数字
@@ -48,8 +48,11 @@ class LoginController: UIViewController {
             
             // 判断手机号和密码是否正确
             if mobile == "15160760810" && password == "admin123" {
+                // 登录成功，保存用户信息
+                let userInfo = UserInfo(mobile: mobile)
+                PreferenceUtils.saveUserInfo(userInfo: userInfo)
                 // 跳转到首页
-                SceneDelegate.shared.setRootViewController(storyboardName: "Main", controllerName: "Home")
+                SceneDelegate.shared.goHome()
             } else {
                 self.showAlert(message: "手机号或密码错误！")
             }

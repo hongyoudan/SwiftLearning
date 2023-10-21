@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BCA1CBB62AE3C4B1007A3267 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1CBB52AE3C4B1007A3267 /* SplashController.swift */; };
 		BCA1CBB82AE3FBC5007A3267 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1CBB72AE3FBC5007A3267 /* HomeController.swift */; };
+		BCEB40282AE40FE1006739E2 /* PreferenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB40272AE40FE1006739E2 /* PreferenceUtils.swift */; };
+		BCEB402A2AE41361006739E2 /* ConstantsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB40292AE41361006739E2 /* ConstantsUtils.swift */; };
+		BCEB402D2AE413BA006739E2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB402C2AE413BA006739E2 /* UserInfo.swift */; };
 		BCEFC25D2AE39AB80036A12C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEFC25C2AE39AB80036A12C /* AppDelegate.swift */; };
 		BCEFC25F2AE39AB80036A12C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEFC25E2AE39AB80036A12C /* SceneDelegate.swift */; };
 		BCEFC2612AE39AB80036A12C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEFC2602AE39AB80036A12C /* LoginController.swift */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		BCA1CBB52AE3C4B1007A3267 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		BCA1CBB72AE3FBC5007A3267 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		BCEB40272AE40FE1006739E2 /* PreferenceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceUtils.swift; sourceTree = "<group>"; };
+		BCEB40292AE41361006739E2 /* ConstantsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUtils.swift; sourceTree = "<group>"; };
+		BCEB402C2AE413BA006739E2 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BCEFC2592AE39AB80036A12C /* SwiftLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCEFC25C2AE39AB80036A12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCEFC25E2AE39AB80036A12C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BCEB40262AE40FCC006739E2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BCEB40272AE40FE1006739E2 /* PreferenceUtils.swift */,
+				BCEB40292AE41361006739E2 /* ConstantsUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BCEB402B2AE4138B006739E2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BCEB402C2AE413BA006739E2 /* UserInfo.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		BCEFC2502AE39AB80036A12C = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +93,8 @@
 		BCEFC25B2AE39AB80036A12C /* SwiftLearning */ = {
 			isa = PBXGroup;
 			children = (
+				BCEB402B2AE4138B006739E2 /* model */,
+				BCEB40262AE40FCC006739E2 /* Utils */,
 				BCA1CBB42AE3C47C007A3267 /* Controller */,
 				BCEFC25C2AE39AB80036A12C /* AppDelegate.swift */,
 				BCEFC25E2AE39AB80036A12C /* SceneDelegate.swift */,
@@ -152,11 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEB40282AE40FE1006739E2 /* PreferenceUtils.swift in Sources */,
 				BCA1CBB62AE3C4B1007A3267 /* SplashController.swift in Sources */,
 				BCEFC2612AE39AB80036A12C /* LoginController.swift in Sources */,
 				BCEFC25D2AE39AB80036A12C /* AppDelegate.swift in Sources */,
+				BCEB402D2AE413BA006739E2 /* UserInfo.swift in Sources */,
 				BCEFC25F2AE39AB80036A12C /* SceneDelegate.swift in Sources */,
 				BCA1CBB82AE3FBC5007A3267 /* HomeController.swift in Sources */,
+				BCEB402A2AE41361006739E2 /* ConstantsUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
