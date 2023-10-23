@@ -52,4 +52,9 @@ class HomeController: UIViewController {
         // 跳转到登录页
         SceneDelegate.shared.goLogin()
     }
+    
+    // 点击跳转图片列表界面
+    @IBAction func btnGoImageList(_ sender: UIButton) {
+        SceneDelegate.shared.goImageList()
+    }
 }

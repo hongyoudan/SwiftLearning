@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1t9-gl-AeI">
-                                <rect key="frame" x="16" y="58.999999999999993" width="361" height="74.333333333333314"/>
+                                <rect key="frame" x="16" y="59" width="361" height="129.33333333333334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esx-MP-CFr">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
@@ -98,6 +98,17 @@
                                         <buttonConfiguration key="configuration" style="tinted" title="退出登录"/>
                                         <connections>
                                             <action selector="btnLogout:" destination="0oa-9f-dnV" eventType="touchUpInside" id="hmO-lQ-s8b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08J-LT-soR">
+                                        <rect key="frame" x="0.0" y="89.333333333333343" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BTq-gN-nBG"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="图片列表"/>
+                                        <connections>
+                                            <action selector="btnGoImageList:" destination="0oa-9f-dnV" eventType="touchUpInside" id="iiY-gE-UOS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -118,6 +129,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsw-kd-Dwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="857" y="-27"/>
+        </scene>
+        <!--Image List Controller-->
+        <scene sceneID="ngd-cS-xBc">
+            <objects>
+                <viewController storyboardIdentifier="ImageList" id="ptf-OV-KUr" customClass="ImageListController" customModule="SwiftLearning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWP-Ns-qhG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n7K-wp-3LZ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="150" id="miD-tv-i76" customClass="TableViewCell" customModule="SwiftLearning" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="miD-tv-i76" id="Qt9-uq-gGA">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biye" translatesAutoresizingMaskIntoConstraints="NO" id="res-Wh-Lea">
+                                                    <rect key="frame" x="20" y="11" width="353" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="res-Wh-Lea" secondAttribute="trailing" id="LsK-iI-gAm"/>
+                                                <constraint firstItem="res-Wh-Lea" firstAttribute="top" secondItem="Qt9-uq-gGA" secondAttribute="topMargin" id="YRV-J7-YEU"/>
+                                                <constraint firstItem="res-Wh-Lea" firstAttribute="bottom" secondItem="Qt9-uq-gGA" secondAttribute="bottomMargin" id="qfa-4e-xWa"/>
+                                                <constraint firstItem="res-Wh-Lea" firstAttribute="leading" secondItem="Qt9-uq-gGA" secondAttribute="leadingMargin" id="ye9-uf-qTP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewCell" destination="res-Wh-Lea" id="kgT-OO-XN5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qwy-2J-j27"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qwy-2J-j27" firstAttribute="trailing" secondItem="n7K-wp-3LZ" secondAttribute="trailing" id="3RZ-DZ-iYK"/>
+                            <constraint firstItem="qwy-2J-j27" firstAttribute="bottom" secondItem="n7K-wp-3LZ" secondAttribute="bottom" id="5QZ-13-FAD"/>
+                            <constraint firstItem="n7K-wp-3LZ" firstAttribute="top" secondItem="qwy-2J-j27" secondAttribute="top" id="64X-3E-hfw"/>
+                            <constraint firstItem="n7K-wp-3LZ" firstAttribute="leading" secondItem="qwy-2J-j27" secondAttribute="leading" id="Jak-yF-54N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="n7K-wp-3LZ" id="ial-ez-Iem"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wob-a2-FMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="-27"/>
         </scene>
         <!--Splash Controller-->
         <scene sceneID="PV1-Il-IFh">
@@ -150,6 +215,7 @@
     </scenes>
     <resources>
         <image name="BchtxLogo" width="588" height="612"/>
+        <image name="biye" width="463.33334350585938" height="193.33332824707031"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
