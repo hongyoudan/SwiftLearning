@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC6139442AE6236F004C6D82 /* ImageDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6139432AE6236F004C6D82 /* ImageDetailController.swift */; };
 		BCA1CBB62AE3C4B1007A3267 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1CBB52AE3C4B1007A3267 /* SplashController.swift */; };
 		BCA1CBB82AE3FBC5007A3267 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1CBB72AE3FBC5007A3267 /* HomeController.swift */; };
 		BCA52B3E2AE430140034CF47 /* ImageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA52B3D2AE430140034CF47 /* ImageListController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC6139432AE6236F004C6D82 /* ImageDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailController.swift; sourceTree = "<group>"; };
 		BCA1CBB52AE3C4B1007A3267 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		BCA1CBB72AE3FBC5007A3267 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		BCA52B3D2AE430140034CF47 /* ImageListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				BCA1CBB52AE3C4B1007A3267 /* SplashController.swift */,
 				BCA1CBB72AE3FBC5007A3267 /* HomeController.swift */,
 				BCA52B3D2AE430140034CF47 /* ImageListController.swift */,
+				BC6139432AE6236F004C6D82 /* ImageDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				BCA52B412AE5622B0034CF47 /* TableViewCell.swift in Sources */,
 				BCEB402D2AE413BA006739E2 /* UserInfo.swift in Sources */,
 				BCEFC25F2AE39AB80036A12C /* SceneDelegate.swift in Sources */,
+				BC6139442AE6236F004C6D82 /* ImageDetailController.swift in Sources */,
 				BCA1CBB82AE3FBC5007A3267 /* HomeController.swift in Sources */,
 				BCEB402A2AE41361006739E2 /* ConstantsUtils.swift in Sources */,
 			);

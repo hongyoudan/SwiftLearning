@@ -55,6 +55,12 @@ class HomeController: UIViewController {
     
     // 点击跳转图片列表界面
     @IBAction func btnGoImageList(_ sender: UIButton) {
-        SceneDelegate.shared.goImageList()
+        // 实例化一个名为 ImageListController 的视图控制器
+        // 这个视图控制器在应用的 Storyboard 中定义，并设置标识符"ImageListController"
+        // 然后，该方法通过强制类型转换 as! ImageListController 将这个视图控制器实例转换为 ImageListController 类型
+        let imageListController = storyboard?.instantiateViewController(identifier: "ImageListController") as! ImageListController
+        // 将实例化的视图控制器推送到导航控制器（navigationController）的栈中，实现页面跳转
+        // 这里的 animated: true 表示这个跳转过程是动画化的
+        navigationController?.pushViewController(imageListController, animated: true)
     }
 }

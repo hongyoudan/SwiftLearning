@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="-19" y="-27"/>
         </scene>
-        <!--Home Controller-->
+        <!--首页-->
         <scene sceneID="XDK-ah-Zzq">
             <objects>
                 <viewController storyboardIdentifier="Home" id="0oa-9f-dnV" customClass="HomeController" customModule="SwiftLearning" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1t9-gl-AeI">
-                                <rect key="frame" x="16" y="59" width="361" height="129.33333333333334"/>
+                                <rect key="frame" x="16" y="103.00000000000001" width="361" height="129.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esx-MP-CFr">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
@@ -90,7 +90,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVQ-20-0Uv">
-                                        <rect key="frame" x="0.0" y="34.333333333333329" width="361" height="40"/>
+                                        <rect key="frame" x="0.0" y="34.333333333333343" width="361" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="vgl-kE-NsL"/>
                                         </constraints>
@@ -122,27 +122,28 @@
                             <constraint firstItem="1t9-gl-AeI" firstAttribute="leading" secondItem="FgR-Gd-8tn" secondAttribute="leading" constant="16" id="NvU-Iu-Ec5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="首页" id="dnQ-Xa-w2b"/>
                     <connections>
                         <outlet property="lbUserInfo" destination="esx-MP-CFr" id="nSt-Vi-IFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsw-kd-Dwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="-27"/>
+            <point key="canvasLocation" x="1782.4427480916029" y="-27.464788732394368"/>
         </scene>
-        <!--Image List Controller-->
+        <!--图片列表-->
         <scene sceneID="ngd-cS-xBc">
             <objects>
-                <viewController storyboardIdentifier="ImageList" id="ptf-OV-KUr" customClass="ImageListController" customModule="SwiftLearning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageListController" id="ptf-OV-KUr" customClass="ImageListController" customModule="SwiftLearning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aWP-Ns-qhG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n7K-wp-3LZ">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="150" id="miD-tv-i76" customClass="TableViewCell" customModule="SwiftLearning" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="150" id="miD-tv-i76" customClass="TableViewCell" customModule="SwiftLearning" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="miD-tv-i76" id="Qt9-uq-gGA">
@@ -165,6 +166,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ptf-OV-KUr" id="k0I-da-Jb8"/>
+                                    <outlet property="delegate" destination="ptf-OV-KUr" id="sTI-vX-BME"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qwy-2J-j27"/>
@@ -176,13 +181,14 @@
                             <constraint firstItem="n7K-wp-3LZ" firstAttribute="leading" secondItem="qwy-2J-j27" secondAttribute="leading" id="Jak-yF-54N"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="图片列表" id="EpN-tc-gpn"/>
                     <connections>
                         <outlet property="tableView" destination="n7K-wp-3LZ" id="ial-ez-Iem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wob-a2-FMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="-27"/>
+            <point key="canvasLocation" x="3605.3435114503814" y="-27.464788732394368"/>
         </scene>
         <!--Splash Controller-->
         <scene sceneID="PV1-Il-IFh">
@@ -211,6 +217,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcz-J0-tom" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-906" y="-27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ual-rL-JkJ">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="QdD-Pd-0gc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WOR-tU-puy">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0oa-9f-dnV" kind="relationship" relationship="rootViewController" id="ocx-p0-z8R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKQ-fq-eGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855.72519083969462" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s6F-DY-6WK">
+            <objects>
+                <navigationController storyboardIdentifier="ImageListNavicationController" automaticallyAdjustsScrollViewInsets="NO" id="SNu-em-yk1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tQ3-za-AIS">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ptf-OV-KUr" kind="relationship" relationship="rootViewController" id="GDC-wZ-5uZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqC-qo-6Eo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2678.6259541984732" y="-27.464788732394368"/>
+        </scene>
+        <!--Image Detail Controller-->
+        <scene sceneID="ibw-RQ-DJA">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetailController" id="AN0-IP-XeD" customClass="ImageDetailController" customModule="SwiftLearning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y9f-dF-njS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dQl-9N-ptt">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Eo5-g2-MQl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dQl-9N-ptt" firstAttribute="top" secondItem="Eo5-g2-MQl" secondAttribute="top" id="Mt2-gc-imW"/>
+                            <constraint firstItem="Eo5-g2-MQl" firstAttribute="trailing" secondItem="dQl-9N-ptt" secondAttribute="trailing" id="g02-U6-TGq"/>
+                            <constraint firstItem="dQl-9N-ptt" firstAttribute="leading" secondItem="Eo5-g2-MQl" secondAttribute="leading" id="obQ-JF-agk"/>
+                            <constraint firstItem="Eo5-g2-MQl" firstAttribute="bottom" secondItem="dQl-9N-ptt" secondAttribute="bottom" id="vMQ-Tx-Fp1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FIl-Hd-AXh"/>
+                    <connections>
+                        <outlet property="iv" destination="dQl-9N-ptt" id="sCj-SD-oyw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5DC-D7-JrL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4529" y="-27"/>
         </scene>
     </scenes>
     <resources>

@@ -27,12 +27,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     // 跳转到首页
     func goHome(){
-        setRootViewController(storyboardName: "Main", controllerName: "Home")
+        setRootViewController(storyboardName: "Main", controllerName: "HomeNavigationController")
     }
     
     // 跳转到图片列表界面
     func goImageList(){
-        setRootViewController(storyboardName: "Main", controllerName: "ImageList")
+        setRootViewController(storyboardName: "Main", controllerName: "ImageListController")
     }
 
     // 设置根控制器

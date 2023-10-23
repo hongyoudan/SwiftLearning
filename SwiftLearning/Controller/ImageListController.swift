@@ -25,7 +25,7 @@ class ImageListController: UIViewController {
 }
 
 // 实现了 UITableViewDataSource 协议的扩展，该协议用于为 UITableView 提供数据
-extension ImageListController: UITableViewDataSource {
+extension ImageListController: UITableViewDelegate, UITableViewDataSource {
     
     // UITableViewDataSource 协议的一个方法，返回表视图的行数。
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,5 +40,20 @@ extension ImageListController: UITableViewDataSource {
         // 然后将 ImageListData 数组中的相应元素绑定到该单元格上，最后返回这个单元格
         cell.bind(ImageListData[indexPath.row])
         return cell
+    }
+
+    // UITableViewDataSource 协议的方法，每当用户选择一个 UITableView 的行时，就会调用这个方法
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 获取点击的单元格的索引
+        let index = indexPath.row
+        // 从 ImageListData 数组中获取与所选择行索引相对应的元素（通常是一个图片的名称
+        let imageName = ImageListData[index]
+        // 从 Storyboard 中实例化一个名为 ImageDetailController 的视图控制器。然后，它强制转换为 ImageDetailController 类型
+        let imageDetailController = storyboard?.instantiateViewController(withIdentifier: "ImageDetailController") as! ImageDetailController
+        // 将获取到的图片名称设置为 ImageDetailController 实例的 imageName 属性
+        // 这样，当用户导航到 ImageDetailController 视图控制器时，这个视图控制器就可以使用这个图片名称来获取并显示相应的图片
+        imageDetailController.imageName = imageName
+        // 跳转到 ImageDetailController 视图控制器
+        navigationController?.pushViewController(imageDetailController, animated: true)
     }
 }
